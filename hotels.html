@@ -8,7 +8,7 @@
     <header class='main-header'>
       <nav class='main-navigation'>
         <a href='#' class='main-header-logo'>
-            <img src='http://placehold.it/100x100' height='100' width='100' alt='Логотип Седоны'>  
+            <img src='img/logo@2x.png' height='70' width='138' alt='Логотип Седоны'>  
         </a>  
         <ul class='site-navigation'>
           <li><a href='info.html'>Информация</a></li>
@@ -19,72 +19,95 @@
       </nav>
     </header>
     
-    <main>
-        
-        <section class='filter'>
-            <!-- Форма -->
-        </section>
+    <main>   
+
+        <form class='filter'>
+            
+                <h3>Инфраструктура:</h3>  
+                <input type='checkbox' name='pool' checked>
+                <p>Бассейн</p>
+                <input type='checkbox' name='parking'>
+                <p>Парковка</p>
+                <input type='checkbox' name='wi-fi'>
+                <p>Wi-Fi</p>
+            
+                <h3>Тип жилья:</h3>
+                <input type='checkbox' name='hotel' checked>
+                <p>Гостиница</p>
+                <input type='checkbox' name='motel'>
+                <p>Мотель</p>
+                <input type='checkbox' name='flat'>
+                <p>Апартаменты</p>
+            
+                <h3>Стоимость в сутки (Р):</h3>
+                <div>
+                    <span>От</span>
+                    <select>
+                        <option value='0'>0</option>
+                    </select>
+                    <span>До</span>
+                    <select>
+                        <option value='3000'>3000</option>
+                    </select>
+                </div>
+                <div class='filter-slider'></div>
+                <input type='submit' value='Показать'>
+        </form>
         
         <section class='results'>
-            <h2>Найдено: <span class='results-count'>3</span></h2>
+            <h3>Найдено: <span class='results-count'>3</span></h3>
             <b>Сортировка</b>
             <ul class='results-sort'>
                 <li class='results-sort-active'><a>По цене</a></li>
                 <li><a href='#'>По типу</a></li>
                 <li><a href='#'>По рейтингу</a></li>
+                <li><span class='results-buttons'></span></li>
             </ul>
-            <ul class='results-buttons'>
-                <li>
-                    <a href='#'><img src='http://placehold.it/20x20' width='20' height='20' alt='Сортировать по возрастанию'></a>
-                </li>
-                <li class='results-buttons-active'>
-                    <a href='#'><img src='http://placehold.it/20x20' width='20' height='20' alt='Сортировать по убыванию'></a>
-                </li>
-            </ul>
-            <ul class='products'>
-                <li class='products-item'>
-                    <img src='http://placehold.it/100x100' width='100' height='100' alt='Amara Resort &amp; Spa'>
-                    <div>
-                        <h3>Amara Resort &amp; Spa</h3>
-                        <p>Гостиница</p>
-                        <p>от 4000 Р.</p>
-                        <span class='button products-item-details'><a href='#'>Подробнее</a></span>
-                        <span class='button products-item-book'><a href='#'>Забронировать</a></span>
-                    </div>
-                    <div>
-                        <img class='products-item-stars' src='http://placehold.it/80x20' width='80' height='20' alt='4 звезды'>
-                        <span class='button products-item-rating'>Рейтинг: 8.5</span>
-                    </div>
-                </li>
-                <li class='products-item'>
-                    <img src='http://placehold.it/100x100' width='100' height='100' alt='Desert Quail Inn'>
-                    <div>
-                        <h3>Desert Quail Inn</h3>
-                        <p>Мотель</p>
-                        <p>от 3000 Р.</p>
-                        <span class='button products-item-details'><a href='#'>Подробнее</a></span>
-                        <span class='button products-item-book'><a href='#'>Забронировать</a></span>
-                    </div>
-                    <div>
-                        <img class='products-item-stars' src='http://placehold.it/60x20' width='60' height='20' alt='4 звезды'>
-                        <span class='button products-item-rating'>Рейтинг: 8.9</span>
-                    </div>
-                </li>
-                <li class='products-item'>
-                    <img src='http://placehold.it/100x100' width='100' height='100' alt='Villas At Poco Diablo'>
-                    <div>
-                        <h3>Villas At Poco Diablo</h3>
-                        <p>Гостиница</p>
-                        <p>от 2000 Р.</p>
-                        <span class='button products-item-details'><a href='#'>Подробнее</a></span>
-                        <span class='button products-item-book'><a href='#'>Забронировать</a></span>
-                    </div>
-                    <div>
-                        <img class='products-item-stars' src='http://placehold.it/40x20' width='80' height='20' alt='4 звезды'>
-                        <span class='button products-item-rating'>Рейтинг: 9.2</span>
-                    </div>
-                </li>
-            </ul>
+        </section>    
+        
+        <section class='products'>
+            <article class='products-item'>
+                <img src='img/hotels-amara@2x.jpg' width='135' height='90' alt='Amara Resort &amp; Spa'>
+                <div>
+                    <h1>Amara Resort &amp; Spa</h1>
+                    <p>Гостиница</p>
+                    <p>от 4000 Р.</p>
+                    <span class='button products-item-details'><a href='#'>Подробнее</a></span>
+                    <span class='button products-item-book'><a href='#'>Забронировать</a></span>
+                </div>
+                <div>
+                    <img class='products-item-stars' src='http://placehold.it/80x20' width='80' height='20' alt='4 звезды'>
+                    <span class='button products-item-rating'>Рейтинг: 8.5</span>
+                </div>
+            </article>
+            <article class='products-item'>
+                <img src='img/hotels-desert@2x.jpg' width='135' height='90' alt='Desert Quail Inn'>
+                <div>
+                    <h1>Desert Quail Inn</h1>
+                    <p>Мотель</p>
+                    <p>от 3000 Р.</p>
+                    <span class='button products-item-details'><a href='#'>Подробнее</a></span>
+                    <span class='button products-item-book'><a href='#'>Забронировать</a></span>
+                </div>
+                <div>
+                    <img class='products-item-stars' src='http://placehold.it/60x20' width='60' height='20' alt='4 звезды'>
+                    <span class='button products-item-rating'>Рейтинг: 8.9</span>
+                </div>
+            </article>
+            <article class='products-item'>
+                <img src='img/hotels-diablo@2x.jpg' width='135' height='90' alt='Villas At Poco Diablo'>
+                <div>
+                    <h1>Villas At Poco Diablo</h1>
+                    <p>Гостиница</p>
+                    <p>от 2000 Р.</p>
+                    <span class='button products-item-details'><a href='#'>Подробнее</a></span>
+                    <span class='button products-item-book'><a href='#'>Забронировать</a></span>
+                </div>
+                <div>
+                    <img class='products-item-stars' src='http://placehold.it/40x20' width='80' height='20' alt='4 звезды'>
+                    <span class='button products-item-rating'>Рейтинг: 9.2</span>
+                </div>
+            </article>
         </section>
       
     </main>
@@ -103,10 +126,8 @@
             </li>
         </ul>
         <div class='footer-copyright'>
-            <span>Website by</span>
-            <img src='http://placehold.it/100x100' width='100' height='100' alt='Логотип HTML Academy'>
-        </div>
-      
+            <a href='https://htmlacademy.ru/intensive/htmlcss' target='_blank'><span>Website by</span></a>
+        </div>    
     </footer>
 
   </body>
