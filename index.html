@@ -45,7 +45,7 @@
                 </div>
                 <div class='features-list-row'>
                     <div>
-                        <img class='features-icon' src='img/icon-house.svg' width='75' height='72' alt='Иконка дома'>
+                        <div class='features-icon features-icon-house'></div>
                         <h3>Жилье</h3>
                         <p>
                             Рекомендуем пожить в настоящем мотеле,<br>
@@ -53,7 +53,7 @@
                         </p>
                     </div>
                     <div>
-                        <img class='features-icon' src='img/icon-burger.svg' width='74' height='70' alt='Иконка бургера'>
+                        <div class='features-icon features-icon-burger'></div>
                         <h3>Еда</h3>
                         <p>
                             Всегда заказывайте фирменный бургер,<br>
@@ -61,7 +61,7 @@
                         </p>
                     </div>
                     <div>
-                        <img class='features-icon' src='img/icon-gifts.svg' width='64' height='76' alt='Иконка сувенира'>
+                        <div class='features-icon features-icon-gifts'></div>
                         <h3>Сувениры</h3>
                         <p>
                             Не только китайского, но и местного<br>
@@ -117,22 +117,20 @@
                 и мы покажем вам лучшие предложения гостиниц в Седоне
             </p>
             <form>
-                <p>Дата заезда:</p>
-                <select class='booking-check-in'>
-                    <option value='24-04-2017'>24 апреля 2017</option>
-                </select>
-                <p>Дата выезда:</p>
-                <select class='booking-check-out'>
-                    <option value='04-07-2017'>4 июля 2017</option>
-                </select>
-                <p>Взрослые:</p>
-                    <select class='booking-adults'>
-                        <option value='2'>2</option>
-                    </select>
-                <p>Дети:</p>
-                    <select class='booking-check-out'>
-                        <option value='0'>0</option>
-                    </select>
+                <fieldset>
+                    <h3 class='invisible'>Даты поездки</h3>
+                    <label for='check-in'>Дата заезда:</label>
+                    <input name='check-in' type='date' value='2017-04-24'>
+                    <label for='check-out'>Дата выезда:</label>
+                    <input name='check-out' type='date' value='2017-07-04'>
+                </fieldset>
+                <fieldset>
+                    <h3 class='invisible'>Участники поездки</h3>
+                    <label for='adults'>Взрослые:</label>
+                    <input name='adults' type='number' value='2'>
+                    <label for='children'>Дети:</label>
+                    <input name='children' type='number' value='0'>
+                </fieldset>    
                 <input type='submit' value='Найти'>
             </form>
         </section>
