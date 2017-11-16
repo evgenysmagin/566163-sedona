@@ -113,22 +113,28 @@
                 Укажите предполагаемые даты поездки,<br>
                 и мы покажем вам лучшие предложения гостиниц в Седоне
             </p>
-            <form>
+            <form class='booking-form' method='post' action='http://echo.htmlacademy.ru'>
                 <fieldset>
                     <h3 class='invisible'>Даты поездки</h3>
-                    <label for='booking-check-in'>Дата заезда:</label>
-                    <input id='booking-check-in' name='trip-dates' type='date' value='2017-04-24'>
-                    <label for='booking-check-out'>Дата выезда:</label>
-                    <input id='bookingcheck-out' name='trip-dates' type='date' value='2017-07-04'>
+                    <p>
+                        <label for='booking-check-in'>Дата заезда:</label>
+                        <input id='booking-check-in' name='dates-check-in' type='date' value='2017-04-24'>
+                    </p>
+                    <p>
+                        <label for='booking-check-out'>Дата выезда:</label>
+                        <input id='bookingcheck-out' name='dates-check-out' type='date' value='2017-07-04'>
+                    </p>
                 </fieldset>
                 <fieldset>
                     <h3 class='invisible'>Участники поездки</h3>
-                    <label for='booking-adults'>Взрослые:</label>
-                    <input id='booking-adults' name='participants' type='number' value='2'>
-                    <label for='booking-children'>Дети:</label>
-                    <input id='booking-children' name='participants' type='number' value='0'>
-                </fieldset>    
-                <input type='submit' value='Найти'>
+                    <p>
+                        <label for='booking-adults'>Взрослые:</label>
+                        <input id='booking-adults' name='participants-adults' type='number' value='2'>
+                        <label for='booking-children'>Дети:</label>
+                        <input id='booking-children' name='participants-children' type='number' value='0'>
+                    </p>    
+                </fieldset>
+                <button type='submit'>Найти</button>
             </form>
         </section>
       
@@ -148,7 +154,7 @@
             </li>
         </ul>
         <div class='footer-copyright'>
-            <a href='https://htmlacademy.ru/intensive/htmlcss' target='_blank'><span>Website by</span></a>
+            <a href='https://htmlacademy.ru/intensive/htmlcss' target='_blank'><span>Website by</span><span class='invisible'>HTML Academy</span></a>
         </div>
     </footer>
 

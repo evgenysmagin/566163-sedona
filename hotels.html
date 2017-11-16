@@ -21,35 +21,60 @@
     
     <main>   
 
-        <form class='filter'>
+        <form class='filter' method='get' action='http://echo.htmlacademy.ru'>
             <fieldset>
-                <h2>Инфраструктура:</h2>  
-                <input type='checkbox' id='filter-pool' name='infrastructure' checked>
-                <label for='filter-pool'>Бассейн</label>
-                <input type='checkbox' id='filter-parking' name='infrastructure'>
-                <label for='filter-parking'>Парковка</label>
-                <input type='checkbox' id='filter-wi-fi' name='infrastructure'>
-                <label for='filter-wi-fi'>Wi-Fi</label>
+                <legend>Инфраструктура:</legend>
+                <ul>
+                    <li class='filter-option'>
+                        <input type='checkbox' id='filter-option-pool' class='invisible filter-input' name='infrastructure-pool' checked>
+                        <label for='filter-option-pool'>Бассейн</label>
+                    </li>
+                    <li class='filter-option'>
+                        <input type='checkbox' id='filter-option-parking' class='invisible filter-input' name='infrastructure-parking'>
+                        <label for='filter-option-parking'>Парковка</label>
+                    </li>
+                    <li class='filter-option'>
+                        <input type='checkbox' id='filter-option-wi-fi' class='invisible filter-input' name='infrastructure-wi-fi'>
+                        <label for='filter-option-wi-fi'>Wi-Fi</label>
+                    </li>    
+                </ul>    
             </fieldset>
             <fieldset>
-                <h2>Тип жилья:</h2>
-                <input type='checkbox' id='filter-hotel' name='accommodation' checked>
-                <label for='filter-hotel'>Гостиница</label>
-                <input type='checkbox' id='filter-motel' name='accommodation'>
-                <label for='filter-motel'>Мотель</label>
-                <input type='checkbox' id='filter-flat' name='accommodation'>
-                <label for='filter-flat'>Апартаменты</label>
+                <legend>Тип жилья:</legend>
+                <ul>
+                    <li class='filter-option'>
+                        <input type='checkbox' id='filter-option-hotel' class='invisible filter-input' name='accommodation-hotel' checked>
+                        <label for='filter-option-hotel'>Гостиница</label>
+                    </li>
+                    <li class='filter-option'>    
+                        <input type='checkbox' id='filter-option-motel' class='invisible filter-input' name='accommodation-motel' checked>
+                        <label for='filter-option-motel'>Мотель</label>
+                    </li>
+                    <li class='filter-option'>    
+                        <input type='checkbox' id='filter-option-flat' class='invisible filter-input' name='accommodation-flat' checked>
+                        <label for='filter-option-flat'>Апартаменты</label>
+                    </li>    
+                </ul>    
             </fieldset>
-                <!-- стоимость в сутки -->
+            <fieldset>
+                    <legend>Стоимость в сутки (Р):</legend>
+                    <div>
+                        <output name='pricemin'>0</output>
+                        <output name='pricemax'>3000</output>
+                    </div>
+                    <input oninput='pricemin.value=filterpricemin.value' type='range' id='filterpricemin' class='invisible' min='0' max='3500' step='10' value='0'>
+                    <input oninput='pricemax.value=filterpricemax.value' type='range' id='filterpricemax' class='invisible' min='0' max='3500' step='10' value='3000'>
+            </fieldset>
+            <button type='submit'>Показать</button>
         </form>
         
         <section class='results'>
             <h2>Найдено: <span class='results-count'>3</span></h2>
             <h3>Сортировка</h3>
             <ul class='results-sort'>
-                <li class='results-sort-active'><a>По цене</a></li>
-                <li><a href='#'>По типу</a></li>
-                <li><a href='#'>По рейтингу</a></li>
+                <li><button class='results-sort-active'>По цене</button></li>
+                <li><button>По типу</button></li>
+                <li><button>По рейтингу</button></li>
                 
             </ul>
             <ul class='result-buttons'>
@@ -131,8 +156,8 @@
             </li>
         </ul>
         <div class='footer-copyright'>
-            <a href='https://htmlacademy.ru/intensive/htmlcss' target='_blank'><span>Website by</span></a>
-        </div>    
+            <a href='https://htmlacademy.ru/intensive/htmlcss' target='_blank'><span>Website by</span><span class='invisible'>HTML Academy</span></a>
+        </div>
     </footer>
 
   </body>
