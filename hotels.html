@@ -26,15 +26,15 @@
                 <legend>Инфраструктура:</legend>
                 <ul>
                     <li class='filter-option'>
-                        <input type='checkbox' id='filter-option-pool' class='invisible filter-input' name='infrastructure-pool' checked>
+                        <input type='checkbox' id='filter-option-pool' class='visually-hidden filter-input' name='infrastructure-pool' checked>
                         <label for='filter-option-pool'>Бассейн</label>
                     </li>
                     <li class='filter-option'>
-                        <input type='checkbox' id='filter-option-parking' class='invisible filter-input' name='infrastructure-parking'>
+                        <input type='checkbox' id='filter-option-parking' class='visually-hidden filter-input' name='infrastructure-parking'>
                         <label for='filter-option-parking'>Парковка</label>
                     </li>
                     <li class='filter-option'>
-                        <input type='checkbox' id='filter-option-wi-fi' class='invisible filter-input' name='infrastructure-wi-fi'>
+                        <input type='checkbox' id='filter-option-wi-fi' class='visually-hidden filter-input' name='infrastructure-wi-fi'>
                         <label for='filter-option-wi-fi'>Wi-Fi</label>
                     </li>    
                 </ul>    
@@ -43,15 +43,15 @@
                 <legend>Тип жилья:</legend>
                 <ul>
                     <li class='filter-option'>
-                        <input type='checkbox' id='filter-option-hotel' class='invisible filter-input' name='accommodation-hotel' checked>
+                        <input type='checkbox' id='filter-option-hotel' class='visually-hidden filter-input' name='accommodation-hotel' checked>
                         <label for='filter-option-hotel'>Гостиница</label>
                     </li>
                     <li class='filter-option'>    
-                        <input type='checkbox' id='filter-option-motel' class='invisible filter-input' name='accommodation-motel' checked>
+                        <input type='checkbox' id='filter-option-motel' class='visually-hidden filter-input' name='accommodation-motel' checked>
                         <label for='filter-option-motel'>Мотель</label>
                     </li>
                     <li class='filter-option'>    
-                        <input type='checkbox' id='filter-option-flat' class='invisible filter-input' name='accommodation-flat' checked>
+                        <input type='checkbox' id='filter-option-flat' class='visually-hidden filter-input' name='accommodation-flat' checked>
                         <label for='filter-option-flat'>Апартаменты</label>
                     </li>    
                 </ul>    
@@ -62,8 +62,8 @@
                         <output name='pricemin'>0</output>
                         <output name='pricemax'>3000</output>
                     </div>
-                    <input oninput='pricemin.value=filterpricemin.value' type='range' id='filterpricemin' class='invisible' min='0' max='3500' step='10' value='0'>
-                    <input oninput='pricemax.value=filterpricemax.value' type='range' id='filterpricemax' class='invisible' min='0' max='3500' step='10' value='3000'>
+                    <input oninput='pricemin.value=filterpricemin.value' type='range' id='filterpricemin' class='visually-hidden' min='0' max='3500' step='10' value='0'>
+                    <input oninput='pricemax.value=filterpricemax.value' type='range' id='filterpricemax' class='visually-hidden' min='0' max='3500' step='10' value='3000'>
             </fieldset>
             <button type='submit'>Показать</button>
         </form>
@@ -72,9 +72,9 @@
             <h2>Найдено: <span class='results-count'>3</span></h2>
             <h3>Сортировка</h3>
             <ul class='results-sort'>
-                <li><button class='results-sort-active'>По цене</button></li>
-                <li><button>По типу</button></li>
-                <li><button>По рейтингу</button></li>
+                <li><a href='#' class='results-sort-active'>По цене</a></li>
+                <li><a href='#'>По типу</a></li>
+                <li><a href='#'>По рейтингу</a></li>
                 
             </ul>
             <ul class='result-buttons'>
@@ -156,7 +156,7 @@
             </li>
         </ul>
         <div class='footer-copyright'>
-            <a href='https://htmlacademy.ru/intensive/htmlcss' target='_blank'><span>Website by</span><span class='invisible'>HTML Academy</span></a>
+            <a href='https://htmlacademy.ru/intensive/htmlcss' target='_blank'><span>Website by</span><span class='visually-hidden'>HTML Academy</span></a>
         </div>
     </footer>
 
