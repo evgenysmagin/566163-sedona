@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+    <link href='css/normalize.css' rel='stylesheet'>
+    <link href='css/style.css' rel='stylesheet'>  
   </head>
   <body>
     <header class='main-header'>
@@ -14,59 +17,64 @@
           <li><a href='info.html'>Информация</a></li>
           <li><a href='media.html'>Фото и видео</a></li>
           <li><a href='map.html'>Карта штата</a></li>
-          <li class='site-navigation-current'><a href='hotels.html'>Гостиницы</a></li>     
+          <li><a class='active' href='hotels.html'>Гостиницы</a></li>     
         </ul>
       </nav>
     </header>
     
     <main>   
-
-        <form class='filter' method='get' action='http://echo.htmlacademy.ru'>
-            <fieldset>
-                <legend>Инфраструктура:</legend>
-                <ul>
-                    <li class='filter-option'>
-                        <input type='checkbox' id='filter-option-pool' class='visually-hidden filter-input' name='infrastructure-pool' checked>
-                        <label for='filter-option-pool'>Бассейн</label>
-                    </li>
-                    <li class='filter-option'>
-                        <input type='checkbox' id='filter-option-parking' class='visually-hidden filter-input' name='infrastructure-parking'>
-                        <label for='filter-option-parking'>Парковка</label>
-                    </li>
-                    <li class='filter-option'>
-                        <input type='checkbox' id='filter-option-wi-fi' class='visually-hidden filter-input' name='infrastructure-wi-fi'>
-                        <label for='filter-option-wi-fi'>Wi-Fi</label>
-                    </li>    
-                </ul>    
-            </fieldset>
-            <fieldset>
-                <legend>Тип жилья:</legend>
-                <ul>
-                    <li class='filter-option'>
-                        <input type='checkbox' id='filter-option-hotel' class='visually-hidden filter-input' name='accommodation-hotel' checked>
-                        <label for='filter-option-hotel'>Гостиница</label>
-                    </li>
-                    <li class='filter-option'>    
-                        <input type='checkbox' id='filter-option-motel' class='visually-hidden filter-input' name='accommodation-motel' checked>
-                        <label for='filter-option-motel'>Мотель</label>
-                    </li>
-                    <li class='filter-option'>    
-                        <input type='checkbox' id='filter-option-flat' class='visually-hidden filter-input' name='accommodation-flat' checked>
-                        <label for='filter-option-flat'>Апартаменты</label>
-                    </li>    
-                </ul>    
-            </fieldset>
-            <fieldset>
-                    <legend>Стоимость в сутки (Р):</legend>
-                    <div>
-                        <output name='pricemin'>0</output>
-                        <output name='pricemax'>3000</output>
-                    </div>
-                    <input oninput='pricemin.value=filterpricemin.value' type='range' id='filterpricemin' class='visually-hidden' min='0' max='3500' step='10' value='0'>
-                    <input oninput='pricemax.value=filterpricemax.value' type='range' id='filterpricemax' class='visually-hidden' min='0' max='3500' step='10' value='3000'>
-            </fieldset>
-            <button type='submit'>Показать</button>
-        </form>
+        <section class='filter'>
+            <form method='get' action='http://echo.htmlacademy.ru'>
+                <div>
+                    <fieldset>
+                        <legend>Инфраструктура:</legend>
+                        <ul>
+                            <li class='filter-option'>
+                                <input type='checkbox' id='filter-option-pool' class='visually-hidden filter-input' name='infrastructure-pool' checked>
+                                <label for='filter-option-pool'>Бассейн</label>
+                            </li>
+                            <li class='filter-option'>
+                                <input type='checkbox' id='filter-option-parking' class='visually-hidden filter-input' name='infrastructure-parking'>
+                                <label for='filter-option-parking'>Парковка</label>
+                            </li>
+                            <li class='filter-option'>
+                                <input type='checkbox' id='filter-option-wi-fi' class='visually-hidden filter-input' name='infrastructure-wi-fi'>
+                                <label for='filter-option-wi-fi'>Wi-Fi</label>
+                            </li>    
+                        </ul>    
+                    </fieldset>
+                    <fieldset>
+                        <legend>Тип жилья:</legend>
+                        <ul>
+                            <li class='filter-option'>
+                                <input type='checkbox' id='filter-option-hotel' class='visually-hidden filter-input' name='accommodation-hotel' checked>
+                                <label for='filter-option-hotel'>Гостиница</label>
+                            </li>
+                            <li class='filter-option'>    
+                                <input type='checkbox' id='filter-option-motel' class='visually-hidden filter-input' name='accommodation-motel' checked>
+                                <label for='filter-option-motel'>Мотель</label>
+                            </li>
+                            <li class='filter-option'>    
+                                <input type='checkbox' id='filter-option-flat' class='visually-hidden filter-input' name='accommodation-flat' checked>
+                                <label for='filter-option-flat'>Апартаменты</label>
+                            </li>    
+                        </ul>    
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset>
+                            <legend>Стоимость в сутки (Р):</legend>
+                            <div>
+                                <output name='pricemin'>0</output>
+                                <output name='pricemax'>3000</output>
+                            </div>
+                            <input oninput='pricemin.value=filterpricemin.value' type='range' id='filterpricemin' class='visually-hidden' min='0' max='3500' step='10' value='0'>
+                            <input oninput='pricemax.value=filterpricemax.value' type='range' id='filterpricemax' class='visually-hidden' min='0' max='3500' step='10' value='3000'>
+                    </fieldset>
+                    <button type='submit'>Показать</button>
+                </div>    
+            </form>
+        </section> 
         
         <section class='results'>
             <h2>Найдено: <span class='results-count'>3</span></h2>
@@ -78,8 +86,8 @@
                 
             </ul>
             <ul class='result-buttons'>
-                <li><a href='#'></a></li>
-                <li class='result-buttons-active'><a href='#'></a></li>
+                <li><a href='#'>Сортировать по возрастанию</a></li>
+                <li class='result-buttons-active'><a href='#'>Сортировать по убыванию</a></li>
             </ul>
         </section>    
         
@@ -98,7 +106,7 @@
                     </div>    
                 </div>
                 <div>
-                    <div class='products-item-stars'></div>
+                    <div class='products-item-stars stars-four'>4 звезды</div>
                     <span class='button products-item-rating'>Рейтинг: 8.5</span>
                 </div>
             </article>
@@ -116,7 +124,7 @@
                     </div>
                 </div>
                 <div>
-                    <div class='products-item-stars'></div>
+                    <div class='products-item-stars stars-three'>3 звезды</div>
                     <span class='button products-item-rating'>Рейтинг: 8.9</span>
                 </div>
             </article>
@@ -134,7 +142,7 @@
                     </div>    
                 </div>
                 <div>
-                    <div class='products-item-stars'></div>
+                    <div class='products-item-stars stars-two'>2 звезды</div>
                     <span class='button products-item-rating'>Рейтинг: 9.2</span>
                 </div>
             </article>
@@ -143,16 +151,16 @@
     </main>
       
     <footer>
-        <b>#VISITSEDONA</b>
+        <a href='#'>#VISITSEDONA</a>
         <ul>
             <li>
-                <a href='#' class='social-button'>Twitter</a>
+                <a href='#' class='button social-button'>Twitter</a>
             </li>
             <li>
-                <a href='#' class='social-button'>Facebook</a>
+                <a href='#' class='button social-button'>Facebook</a>
             </li>
             <li>
-                <a href='#' class='social-button'>Youtube</a>
+                <a href='#' class='button social-button'>Youtube</a>
             </li>
         </ul>
         <div class='footer-copyright'>
