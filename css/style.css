@@ -20,6 +20,9 @@ body {
     margin: 0 auto;
     padding: 0;
     
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.08);
+    -moz-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.08);
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.08);
     background-color: #fff;
 }
 
@@ -34,6 +37,10 @@ a {
 img {
     width: 100%;
     height: auto;
+}
+
+.hide {
+    display: none;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -94,6 +101,42 @@ input[type='radio'].visually-hidden {
     color: rgba(255, 255, 255, 0.3);   
 }
 
+
+input::placeholder {
+    font-family: 'PT Sans', 'Arial', sans-serif;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+input::-webkit-input-placeholder {
+    font-family: 'PT Sans', 'Arial', sans-serif;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+input:-ms-input-placeholder {
+    font-family: 'PT Sans', 'Arial', sans-serif;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+input:-moz-placeholder {
+    font-family: 'PT Sans', 'Arial', sans-serif;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+input::-moz-placeholder {
+    font-family: 'PT Sans', 'Arial', sans-serif;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
 /* index - header */
 
 .main-header {
@@ -114,8 +157,8 @@ input[type='radio'].visually-hidden {
     margin: 0;
     padding-left: 6%;
     padding-right: 6%;
-    padding-top: 24px;
-    padding-bottom: 26px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .main-navigation li {
@@ -123,8 +166,14 @@ input[type='radio'].visually-hidden {
     text-align: left;
 }
 
+.main-navigation li:nth-child(1),
+.main-navigation li:nth-child(2) {
+    margin-right: 3%;
+}
+
 .main-navigation li:nth-child(3),
 .main-navigation li:nth-child(4) {
+    margin-left: 3%;
     text-align: right;
 }
 
@@ -158,8 +207,8 @@ input[type='radio'].visually-hidden {
 /* index - welcome */
 
 .welcome {
-    padding-top: 74px;
-    padding-bottom: 84px;
+    padding-top: 75px;
+    padding-bottom: 82px;
     
     background-image: url('../img/divider.png'), url('../img/background.jpg');
     background-repeat: no-repeat;
@@ -189,13 +238,13 @@ input[type='radio'].visually-hidden {
     line-height: 26px;
     font-weight: 700;
     
-    margin: 0 auto 42px;
+    margin: 0 auto 28px;
 }
 
 .features > p {
     line-height: 26px;
     
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 .features-list h3 {
@@ -327,6 +376,10 @@ input[type='radio'].visually-hidden {
     width: 568px;
     z-index: 2;
     
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.08);
+    -moz-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.08);
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.08);
+    background-color: #fff;
     background-color: #fff;
 }
 
@@ -340,7 +393,8 @@ input[type='radio'].visually-hidden {
     padding: 0;
 }
 
-.booking-form p {
+.booking-form p,
+.booking-form .trip-participants {
     display: flex;
     position: relative;
     flex-wrap: wrap;
@@ -365,19 +419,25 @@ input[type='radio'].visually-hidden {
     background-color: #f2f2f2;
 }
 
-.booking-form input:first-of-type {
+
+.booking-form input:first-of-type{
     margin-left: auto;
 }
 
-.booking-form input[type='number'] {
-    position: relative;
+.trip-participants {
+    display: flex;
+    justify-content: space-between;
+}
+
+.trip-participants input {
+    margin-left: auto;
+    padding: 0;
     width: 115px;
-    margin-right: 31px;
     text-align: center;
 }
 
-.booking-form input[type='number']:last-of-type {
-    margin-right: 0;
+.trip-participants p input:last-of-type {
+/*    margin-right: 0;*/
 }
 
 .booking-date svg {
@@ -386,8 +446,75 @@ input[type='radio'].visually-hidden {
     top: 9px;
 }
 
-label[for='booking-children'] {
+.booking-date svg path {
+    fill: #d7d7d7;
+}
+
+.booking-date svg:focus path,
+.booking-date svg:hover path {
+    fill: #0f0f0f;
+    cursor: pointer;
+}
+
+.booking-date svg:active  path{
+    fill: #81b3d2;
+    cursor: pointer;
+}
+
+.trip-participants label[for='booking-children'] {
     margin-right: 30px;
+}
+
+.trip-participants label[for='booking-adults'] {
+    margin-right: 78px;
+}
+
+.trip-participants p {
+    position: relative;
+}
+
+.trip-participants p:first-child::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 3px;
+    left: 164px;
+    top: 18px;
+    
+    background-image: url('../img/minus.png');
+}
+
+.trip-participants p:first-child::after {
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    left: 240px;
+    top: 14px;
+    
+    background-image: url('../img/plus.png');
+}
+
+.trip-participants p:last-child::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 3px;
+    left: 84px;
+    top: 18px;
+    
+    background-image: url('../img/minus.png');
+}
+
+.trip-participants p:last-child::after {
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    left: 157px;
+    top: 14px;
+    
+    background-image: url('../img/plus.png');
 }
 
 
@@ -454,9 +581,9 @@ label[for='booking-children'] {
     padding-left: 50px;
 }
 
-.filter-option input[type='checkbox'] + label::before,
-.filter-option input[type='checkbox'] + label:focus::before,
-.filter-option input[type='checkbox'] + label:hover::before {
+.filter-input[type='checkbox'] + label::before,
+.filter-input[type='checkbox'] + label:focus::before,
+.filter-input[type='checkbox'] + label:hover::before {
     content: '';
     position: absolute;
     
@@ -470,9 +597,9 @@ label[for='booking-children'] {
     background-position: 0 0;
 }
 
-.filter-option input[checked] + label::before,
-.filter-option input[checked] + label:hover::before,
-.filter-option input[checked] + label:focus::before {
+.filter-input:checked + label::before,
+.filter-input:checked + label:hover::before,
+.filter-input:checked + label:focus::before {
     height: 27px;
     background-image: url('../img/checkbox-on.png');
 }
@@ -686,6 +813,7 @@ ul.results-buttons {
     border-left-width: 6px; 
 }
 
+
 .arrow-up {
     border-bottom: 12px solid #cacaca;
 }
@@ -694,11 +822,35 @@ ul.results-buttons {
     border-top: 12px solid #cacaca;
 }
 
-.result-buttons-active .arrow-down {
+.arrow-up:hover,
+.arrow-up:focus {
+    border-bottom: 12px solid #231f20;
+}
+
+.arrow-up:active {
+    border-bottom: 12px solid #81b3d2;
+}
+
+.arrow-down:hover,
+.arrow-down:focus {
+    border-top: 12px solid #231f20;
+}
+
+.arrow-down:active {
     border-top: 12px solid #81b3d2;
 }
 
-.results-button-active .arrow-up {
+.result-buttons-active .arrow-down,
+.result-buttons-active .arrow-down:hover,
+.result-buttons-active .arrow-down:focus,
+.result-buttons-active .arrow-down:active {
+    border-top: 12px solid #81b3d2;
+}
+
+.results-button-active .arrow-up,
+.result-buttons-active .arrow-up:hover,
+.result-buttons-active .arrow-up:focus,
+.result-buttons-active .arrow-up:active {
     border-bottom: 12px solid #81b3d2;
 }
 
@@ -727,7 +879,7 @@ ul.results-buttons {
 }
 
 .products-item h1 {
-    margin: 0 0 5px 0;
+    margin: 0 0 4px 0;
     padding: 0;
     color: #000;
     font-size: 21px;
@@ -736,7 +888,7 @@ ul.results-buttons {
 }
 
 .products-item p {
-    margin: 0 0 10px 0;
+    margin: 0 0 9px 0;
     padding: 0;
 }
 
