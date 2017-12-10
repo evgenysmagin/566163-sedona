@@ -62,7 +62,7 @@ input[type='radio'].visually-hidden {
 .button-blue,
 .button-brown {
     display: inline-block;
-    padding: 7px 15px;
+    padding: 4px 16px;
     
     font: inherit;
     font-size: 14px;
@@ -208,12 +208,12 @@ input::-moz-placeholder {
 
 .welcome {
     padding-top: 75px;
-    padding-bottom: 82px;
+    padding-bottom: 81px;
     
     background-image: url('../img/divider.png'), url('../img/background.jpg');
     background-repeat: no-repeat;
     background-position: center bottom, center top;
-    background-size: 100% 40px, 100% auto;
+    background-size: 100% 57px, 100% auto;
 }
 
 .welcome img {
@@ -249,8 +249,9 @@ input::-moz-placeholder {
 
 .features-list h3 {
     font-size: 21px;
+    padding: 0 28.6%;
     
-    margin-bottom: 30px;
+    margin-bottom: 26px;
 }
 
 .features-row {
@@ -265,11 +266,17 @@ input::-moz-placeholder {
 
 .features-row:last-of-type {
     background-color: #eee;
+    padding-bottom: 20px;
+}
+
+.features-item span {
+    display: block;
+    margin-bottom: 20px;
 }
 
 .features-item {
     width: 33.33333%;
-    padding: 3%;
+    padding: 2%;
     box-sizing: border-box;
 }
 
@@ -283,9 +290,22 @@ input::-moz-placeholder {
     background-color: #81b3d2;
 }
 
+.features-item-icon {
+    padding-bottom: 68px;
+}
+
 .features-item-icon h3 {
     position: relative;
-    padding-top: 100px;
+    padding-top: 117px;
+    margin-bottom: 24px;
+}
+
+.features-item p {
+    padding: 0 7%;
+}
+
+.features-row:last-of-type p {
+    padding: 0 11%;
 }
 
 .features-item-icon h3::before {
@@ -322,7 +342,7 @@ input::-moz-placeholder {
 /* index - booking */
 
 .booking {
-    padding-top: 56px;
+    padding-top: 60px;
 }
 
 .booking-description {
@@ -331,7 +351,7 @@ input::-moz-placeholder {
 
 .booking-description b {
     display: block;
-    margin-bottom: 36px;
+    margin-bottom: 29px;
     
     font-size: 30px;
     line-height: 24px;
@@ -340,7 +360,7 @@ input::-moz-placeholder {
 
 .booking-description p {
     width: 450px;
-    margin: 0 auto 54px;
+    margin: 0 auto 47px;
     
     line-height: 24px; 
 }
@@ -384,7 +404,7 @@ input::-moz-placeholder {
 }
 
 .booking-form {
-    padding: 55px 30px;
+    padding: 56px 55px 55px;
 }
 
 .booking-form fieldset {
@@ -393,12 +413,17 @@ input::-moz-placeholder {
     padding: 0;
 }
 
-.booking-form p,
+.booking-form p {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    margin: 0 0 29px;
+}
 .booking-form .trip-participants {
     display: flex;
     position: relative;
     flex-wrap: wrap;
-    margin: 0 0 30px;
+    margin: 0 0 24px;
 }
 
 .booking-form label,
@@ -410,9 +435,10 @@ input::-moz-placeholder {
 }
 
 .booking-form input {
-    padding-left: 15px;
+    padding-left: 12px;
     
     width: 345px;
+    box-sizing: border-box;
     height: 38px;
     border: none;
     
@@ -424,6 +450,7 @@ input::-moz-placeholder {
     margin-left: auto;
 }
 
+
 .trip-participants {
     display: flex;
     justify-content: space-between;
@@ -432,13 +459,10 @@ input::-moz-placeholder {
 .trip-participants input {
     margin-left: auto;
     padding: 0;
-    width: 115px;
+    width: 112px;
     text-align: center;
 }
 
-.trip-participants p input:last-of-type {
-/*    margin-right: 0;*/
-}
 
 .booking-date svg {
     position: absolute;
@@ -462,11 +486,11 @@ input::-moz-placeholder {
 }
 
 .trip-participants label[for='booking-children'] {
-    margin-right: 30px;
+    margin-right: 26px;
 }
 
 .trip-participants label[for='booking-adults'] {
-    margin-right: 78px;
+    margin-right: 42px;
 }
 
 .trip-participants p {
@@ -478,7 +502,7 @@ input::-moz-placeholder {
     position: absolute;
     width: 12px;
     height: 3px;
-    left: 164px;
+    left: 125px;
     top: 18px;
     
     background-image: url('../img/minus.png');
@@ -489,7 +513,7 @@ input::-moz-placeholder {
     position: absolute;
     width: 11px;
     height: 11px;
-    left: 240px;
+    left: 200px;
     top: 14px;
     
     background-image: url('../img/plus.png');
@@ -500,7 +524,7 @@ input::-moz-placeholder {
     position: absolute;
     width: 12px;
     height: 3px;
-    left: 84px;
+    left: 78px;
     top: 18px;
     
     background-image: url('../img/minus.png');
@@ -511,7 +535,7 @@ input::-moz-placeholder {
     position: absolute;
     width: 11px;
     height: 11px;
-    left: 157px;
+    left: 153px;
     top: 14px;
     
     background-image: url('../img/plus.png');
@@ -535,8 +559,8 @@ input::-moz-placeholder {
 }
 
 .filter {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 27px;
+    padding-bottom: 12px;
     
     background-image: url('../img/filter-background.jpg');
     background-size: 100% auto;
@@ -560,12 +584,13 @@ input::-moz-placeholder {
 
 .filter-form fieldset:nth-child(2) {
     margin-left: auto;
+    margin-right: 21.5%;
 }
 
 .filter-form legend {
     font-size: 16px;
     font-weight: 700;
-    padding-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .filter-form ul {
@@ -578,7 +603,7 @@ input::-moz-placeholder {
     display: block;
     cursor: pointer;
     user-select: none;
-    padding-left: 50px;
+    padding-left: 40px;
 }
 
 .filter-input[type='checkbox'] + label::before,
@@ -614,7 +639,7 @@ input::-moz-placeholder {
 
 .filter-range {
     margin-left: auto;
-    width: 330px;
+    width: 319px;
     
     color: #fff;
     text-transform: uppercase;
@@ -629,7 +654,7 @@ input::-moz-placeholder {
 
 .price-controls {
     position: relative;
-    height: 36px;
+    height: 32px;
     margin-bottom: 20px;
 
     border: 2px solid #fff;
@@ -652,7 +677,7 @@ input::-moz-placeholder {
 .price-controls label {
     display: inline-block;
     
-    line-height: 38px;
+    line-height: 32px;
     vertical-align: top;
     
     cursor: pointer;
@@ -745,12 +770,13 @@ input::-moz-placeholder {
 .results {
     display: flex;
     justify-content: flex-start;
-    padding-top: 34px;
-    padding-bottom: 34px;
+    padding-top: 18px;
+    padding-bottom: 14px;
     border-bottom: 1px solid #e5e5e5;
 }
 
 .results h3 {
+    font-size: 12px;
     align-self: center;
     margin-left: 48px;
 }
@@ -764,7 +790,8 @@ input::-moz-placeholder {
 }
 
 .results-sort li {
-    margin-left: 30px;
+    text-align: center;
+    margin-left: 31px;
 }
 
 .results-sort li:first-of-type {
@@ -858,14 +885,14 @@ ul.results-buttons {
 
 .products-item {
     display: flex;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     border-bottom: 1px solid #e5e5e5;
 }
 
 .products-image {
     padding-top: 5px;
-    margin-right: 24px;
+    margin-right: 30px;
 }
 
 .products-item-info {
@@ -875,7 +902,7 @@ ul.results-buttons {
 }
 
 .products-item-info div:last-child {
-    margin-left: 6px;
+    margin-left: 9px;
 }
 
 .products-item h1 {
@@ -888,9 +915,10 @@ ul.results-buttons {
 }
 
 .products-item p {
-    margin: 0 0 9px 0;
+    margin: 0 0 15px ;
     padding: 0;
 }
+
 
 .products-rating {
     display: flex;
@@ -911,6 +939,7 @@ ul.results-buttons {
     
     background-color: #f2f2f2;
     cursor: default;
+    margin-bottom: 5px;
 }
 
 
@@ -950,8 +979,8 @@ footer {
     align-items: center;
     
     position: absolute;
-    padding-top: 36px;
-    padding-bottom: 36px;
+    padding-top: 37px;
+    padding-bottom: 42px;
     width: 100%;
     bottom: 0;
     background-color: rgba(255, 255, 255, 0.9);
@@ -964,7 +993,9 @@ footer {
     font-weight: 700;
     color: #000;
     width: 230px;
+    box-sizing: border-box;
     margin-left: 8%;
+    padding-left: 35px;
 }
 
 .social-links {
