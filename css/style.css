@@ -685,7 +685,7 @@ input::-moz-placeholder {
 
 .price-controls .min-price,
 .price-controls .max-price {
-    width: 90px;
+    width: 80px;
     padding-left: 65px;
 }
 
@@ -702,7 +702,7 @@ input::-moz-placeholder {
 
 .range-controls {
     position: relative;
-    margin-bottom: 32px;
+    margin-bottom: 33px;
 }
 
 .range-controls .scale {
@@ -745,8 +745,9 @@ input::-moz-placeholder {
 
 .btn-transparent {
     display: block;
+    padding: 6px 34px;
     margin: 0 auto;
-    padding: 6px 35px;
+    transform: translateX(-5px);
     
     font: inherit;
     line-height: 20px;
@@ -1002,7 +1003,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 152px;
+    width: 153px;
     padding: 0;
     margin: 0 auto;
 }
@@ -1033,6 +1034,8 @@ footer {
     text-align: right;
     margin-right: 8%;
     width: 230px;
+    box-sizing: border-box;
+    padding-right: 5px;
 }
 
 .footer-copyright svg {
@@ -1061,5 +1064,6 @@ footer {
 }
 
 .inner-footer {
+    padding-top: 34px;
     position: static;
 }
