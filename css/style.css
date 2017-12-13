@@ -626,6 +626,7 @@ input::-moz-placeholder {
 .filter-input:checked + label:hover::before,
 .filter-input:checked + label:focus::before {
     height: 27px;
+    width: 25px;
     background-image: url('../img/checkbox-on.png');
 }
 
@@ -675,10 +676,10 @@ input::-moz-placeholder {
 }
 
 .price-controls label {
+    padding-top: 5px;
     display: inline-block;
     
-    line-height: 30px;
-    vertical-align: top;
+    vertical-align: middle;
     
     cursor: pointer;
 }
